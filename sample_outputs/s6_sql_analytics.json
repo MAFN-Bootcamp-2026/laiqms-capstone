@@ -10,43 +10,43 @@
   ],
   "top_candidates": [
     {
-      "ticker": "JPM",
+      "ticker": "UNH",
       "avg_score": 0.5412,
       "n_obs": 378
     },
     {
       "ticker": "GS",
-      "avg_score": 0.5388,
-      "n_obs": 378
-    },
-    {
-      "ticker": "UNH",
-      "avg_score": 0.5315,
+      "avg_score": 0.5378,
       "n_obs": 378
     },
     {
       "ticker": "CAT",
-      "avg_score": 0.5314,
+      "avg_score": 0.5337,
       "n_obs": 378
     },
     {
       "ticker": "GE",
-      "avg_score": 0.5222,
+      "avg_score": 0.5288,
+      "n_obs": 378
+    },
+    {
+      "ticker": "JPM",
+      "avg_score": 0.5234,
       "n_obs": 378
     }
   ],
   "best_strategy": [
     {
-      "strategy": "momentum",
-      "sharpe": 0.3434
-    },
-    {
       "strategy": "ma_crossover",
-      "sharpe": 0.2209
+      "sharpe": 0.2072
     },
     {
       "strategy": "pairs_trading",
-      "sharpe": 0.1031
+      "sharpe": 0.1262
+    },
+    {
+      "strategy": "momentum",
+      "sharpe": -0.0574
     }
   ],
   "expected_loss_by_rating": [

@@ -6,6 +6,7 @@
 
 One notebook, run top to bottom, that builds a real system in the order a quant research desk actually builds one: clean data → engineered features → a validated ML model → an evidence-grounded research layer → a portfolio with real risk controls → a production architecture to run it in.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MAFN-Bootcamp-2026/laiqms-capstone/blob/main/notebook/laiqms_capstone.ipynb)
 [![Notebook runs clean](https://img.shields.io/badge/notebook-runs%20clean-brightgreen)](notebook/laiqms_capstone.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](requirements.txt)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
@@ -21,7 +22,7 @@ One notebook, run top to bottom, that builds a real system in the order a quant 
 | **5 — Portfolio, Execution & Risk** | Strategy construction with realistic frictions and a full risk report | Mean-variance/risk-budget construction, transaction-cost modeling, options overlay, drawdown/turnover/exposure limits |
 | **6 — Production System Design** | The AWS architecture, IAM policy, orchestration, and monitoring this would actually run on | Least-privilege IAM, Step Functions pipeline, CloudWatch drift/freshness monitoring, cost estimate, incident runbook |
 
-Plus a SQL analytics layer (stdlib `sqlite3`, no server) answering the questions a real desk asks of these outputs: best strategy by Sharpe, top candidates by ensemble score, expected loss by credit rating.
+Plus two cross-cutting layers: a **credit-risk module** (PD estimation, expected loss by rating) and a **SQL analytics layer** (stdlib `sqlite3`, no server) answering the questions a real desk asks of these outputs — best strategy by Sharpe, top candidates by ensemble score, expected loss by credit rating.
 
 ## Why it's built this way
 
@@ -32,16 +33,36 @@ Two rules govern every module (the same rules the bootcamp's lectures are built 
 
 ## Run it yourself
 
+**In the browser — no setup:** [open it in Google Colab](https://colab.research.google.com/github/MAFN-Bootcamp-2026/laiqms-capstone/blob/main/notebook/laiqms_capstone.ipynb) and run all cells. Every dependency (numpy, pandas, scipy, scikit-learn) is preinstalled there.
+
+**Locally, with Jupyter:**
+
 ```bash
-git clone git@github.com:MAFN-Bootcamp-2026/laiqms-capstone.git
+git clone https://github.com/MAFN-Bootcamp-2026/laiqms-capstone.git
 cd laiqms-capstone
 pip install -r requirements.txt
+jupyter notebook notebook/laiqms_capstone.ipynb
+```
+
+Or execute it headlessly, end to end:
+
+```bash
 jupyter nbconvert --to notebook --execute notebook/laiqms_capstone.ipynb --output executed.ipynb
 ```
 
-The notebook runs fully **offline** on a reproducible synthetic market — a fixed random seed generates ~3 years of daily prices for a 12-stock universe plus asset-class ETFs, so it needs no data downloads, no API keys, and no cloud credentials to reproduce every result below.
+### Data
 
-`sample_outputs/` holds the actual JSON/CSV artifacts the notebook produces — the model card, walk-forward predictions, portfolio risk report, RAG research briefs, and the final-defense prompts — so you can see the shape of the output without re-running anything.
+By default the notebook pulls **~3 years of real daily prices** for a 12-stock universe plus asset-class ETFs from a public S3 mirror — no API keys and no cloud credentials required. If that fetch fails for any reason (offline, firewall, TLS), it falls back automatically to a **reproducible synthetic market** driven by a fixed seed, so the notebook always runs end to end. The run prints which source it used:
+
+```
+DATA SOURCE: real Yahoo->S3 (751 days x 12 tickers)
+```
+
+To force the fully offline synthetic path, set `MARKET_DATA_BASE_URL = ""` in the setup cell.
+
+Because the real-data path tracks a live market mirror, **results shift as new data arrives** — the committed outputs are a point-in-time snapshot, not a fixed benchmark. Model seeds are pinned (`RNG_SEED`), so a given data snapshot reproduces to floating-point noise.
+
+`sample_outputs/` holds the actual JSON/CSV artifacts from the most recent committed run — the model card, walk-forward predictions, portfolio risk report, credit-risk table, RAG research briefs, SQL analytics, and the final-defense prompts — so you can inspect the output shape without running anything.
 
 ## Repository layout
 

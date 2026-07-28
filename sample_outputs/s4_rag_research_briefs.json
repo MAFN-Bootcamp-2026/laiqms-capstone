@@ -5,81 +5,81 @@
     "Q"
   ],
   "query": "Find candidates with momentum, controlled volatility, beta risk, and leak-free validation.",
-  "retrieval_entropy": 1.6092813116089952,
+  "retrieval_entropy": 1.6092659380795997,
   "attention_weights": [
     [
-      0.2102,
+      0.2101,
       0.1975,
       0.1975,
-      0.1974,
-      0.1974
+      0.1975,
+      0.1975
     ]
   ],
   "top_retrieval": [
     {
       "score": 0.18274932820901232,
-      "confidence": 0.2070992566063849,
+      "confidence": 0.20745244594493362,
       "ticker": "SYSTEM",
       "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
     },
     {
-      "score": 0.1400475486565972,
-      "confidence": 0.1984419073887303,
+      "score": 0.13680533892023816,
+      "confidence": 0.19813688851376657,
       "ticker": "AAPL",
-      "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+      "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
     },
     {
-      "score": 0.14004754865659716,
-      "confidence": 0.1984419073887303,
-      "ticker": "KO",
-      "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+      "score": 0.1368053389202381,
+      "confidence": 0.19813688851376657,
+      "ticker": "MSFT",
+      "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
     },
     {
-      "score": 0.13786092816485673,
-      "confidence": 0.19800846430807723,
-      "ticker": "DIS",
-      "text": "DIS latest research note: 21-day momentum 0.016; annualized volatility 0.200; beta 1.127; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+      "score": 0.1368053389202381,
+      "confidence": 0.19813688851376657,
+      "ticker": "JPM",
+      "text": "JPM latest research note: 21-day momentum 0.063; annualized volatility 0.200; beta 0.754; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
     },
     {
-      "score": 0.13786092816485673,
-      "confidence": 0.19800846430807723,
-      "ticker": "WMT",
-      "text": "WMT latest research note: 21-day momentum -0.127; annualized volatility 0.330; beta 0.382; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+      "score": 0.1368053389202381,
+      "confidence": 0.19813688851376657,
+      "ticker": "GS",
+      "text": "GS latest research note: 21-day momentum -0.016; annualized volatility 0.467; beta 1.124; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
     }
   ],
   "briefs": [
     {
       "ticker": "AAPL",
-      "model_score_30d_mean": 0.4575965332743245,
+      "model_score_30d_mean": 0.5147346844711865,
       "risk": {
-        "vol": 0.24503508622099576,
-        "beta": 0.8669757593689624,
-        "drawdown": -0.07820431472081202
+        "vol": 0.293355405166677,
+        "beta": 1.1066047650901776,
+        "drawdown": -0.1270621827411167
       },
       "evidence": [
         {
-          "score": 0.2546130978070903,
-          "confidence": 0.27828151517335753,
+          "score": 0.24871860645302254,
+          "confidence": 0.27729542426304704,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.2466853971155868,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23769635496188987,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.09545979800915155,
-          "confidence": 0.2373367327491658,
-          "ticker": "DIS",
-          "text": "DIS latest research note: 21-day momentum 0.016; annualized volatility 0.200; beta 1.127; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "JPM",
+          "text": "JPM latest research note: 21-day momentum 0.063; annualized volatility 0.200; beta 0.754; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -87,36 +87,36 @@
     },
     {
       "ticker": "MSFT",
-      "model_score_30d_mean": 0.4147766696406458,
+      "model_score_30d_mean": 0.5075641958346129,
       "risk": {
-        "vol": 0.3762903475709094,
-        "beta": 0.9035438887948096,
-        "drawdown": -0.1772127160601059
+        "vol": 0.32017392797132976,
+        "beta": 1.0002550002795676,
+        "drawdown": -0.23384434986536962
       },
       "evidence": [
         {
           "score": 0.24871860645302252,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "MSFT",
-          "text": "MSFT latest research note: 21-day momentum -0.091; annualized volatility 0.376; beta 0.904; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "JPM",
+          "text": "JPM latest research note: 21-day momentum 0.063; annualized volatility 0.200; beta 0.754; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -124,36 +124,36 @@
     },
     {
       "ticker": "JPM",
-      "model_score_30d_mean": 0.51167912916531,
+      "model_score_30d_mean": 0.5017925169114661,
       "risk": {
-        "vol": 0.25690695381431,
-        "beta": 1.2294551338779176,
-        "drawdown": -0.0671630019874444
+        "vol": 0.20048682310575544,
+        "beta": 0.7539365009673351,
+        "drawdown": -0.06097173705938397
       },
       "evidence": [
         {
           "score": 0.24871860645302252,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "JPM",
-          "text": "JPM latest research note: 21-day momentum 0.100; annualized volatility 0.257; beta 1.229; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "JPM latest research note: 21-day momentum 0.063; annualized volatility 0.200; beta 0.754; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -161,36 +161,36 @@
     },
     {
       "ticker": "GS",
-      "model_score_30d_mean": 0.5270957653839858,
+      "model_score_30d_mean": 0.5478767031253449,
       "risk": {
-        "vol": 0.3872775938307342,
-        "beta": 1.9437030032776266,
-        "drawdown": -0.08357968534060634
+        "vol": 0.4673452674895081,
+        "beta": 1.1236986700347646,
+        "drawdown": -0.09013333305557236
       },
       "evidence": [
         {
           "score": 0.24871860645302252,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "GS",
-          "text": "GS latest research note: 21-day momentum 0.181; annualized volatility 0.387; beta 1.944; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "GS latest research note: 21-day momentum -0.016; annualized volatility 0.467; beta 1.124; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -198,36 +198,36 @@
     },
     {
       "ticker": "XOM",
-      "model_score_30d_mean": 0.5460408246500049,
+      "model_score_30d_mean": 0.44980411848557905,
       "risk": {
-        "vol": 0.2913243641139421,
-        "beta": -0.8606662303850442,
-        "drawdown": -0.19630256021461467
+        "vol": 0.24933990970420436,
+        "beta": -0.3218316939354867,
+        "drawdown": -0.16296524146416502
       },
       "evidence": [
         {
           "score": 0.24871860645302254,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "XOM",
-          "text": "XOM latest research note: 21-day momentum -0.152; annualized volatility 0.291; beta -0.861; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "XOM latest research note: 21-day momentum 0.125; annualized volatility 0.249; beta -0.322; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.2377200487475445,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -235,73 +235,73 @@
     },
     {
       "ticker": "UNH",
-      "model_score_30d_mean": 0.5038150081514199,
+      "model_score_30d_mean": 0.5355957835405611,
       "risk": {
-        "vol": 0.27100692794560094,
-        "beta": 0.6339859266282806,
+        "vol": 0.2738961545542931,
+        "beta": 0.5289390863460459,
         "drawdown": -0.06057433443015259
       },
       "evidence": [
         {
           "score": 0.24871860645302254,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "UNH",
-          "text": "UNH latest research note: 21-day momentum 0.030; annualized volatility 0.271; beta 0.634; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "UNH latest research note: 21-day momentum 0.005; annualized volatility 0.274; beta 0.529; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.2377200487475445,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
-      "decision": "watchlist",
+      "decision": "candidate",
       "unsupported_claims": []
     },
     {
       "ticker": "CAT",
-      "model_score_30d_mean": 0.5124713617798476,
+      "model_score_30d_mean": 0.524667551961873,
       "risk": {
-        "vol": 0.43354281211531726,
-        "beta": 2.054890691788773,
-        "drawdown": -0.08965634569581504
+        "vol": 0.4334129626851046,
+        "beta": 0.8784005640996344,
+        "drawdown": -0.18837449525777072
       },
       "evidence": [
         {
           "score": 0.24871860645302252,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "CAT",
-          "text": "CAT latest research note: 21-day momentum 0.146; annualized volatility 0.434; beta 2.055; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "CAT latest research note: 21-day momentum -0.174; annualized volatility 0.433; beta 0.878; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -309,73 +309,73 @@
     },
     {
       "ticker": "GE",
-      "model_score_30d_mean": 0.5559217072971417,
+      "model_score_30d_mean": 0.5677111592085559,
       "risk": {
-        "vol": 0.3536415962988048,
-        "beta": 2.051392732882465,
-        "drawdown": -0.13116352201257842
+        "vol": 0.2790220987836895,
+        "beta": 1.342569871615384,
+        "drawdown": -0.10029576423365394
       },
       "evidence": [
         {
           "score": 0.24871860645302252,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "GE",
-          "text": "GE latest research note: 21-day momentum 0.254; annualized volatility 0.354; beta 2.051; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "GE latest research note: 21-day momentum -0.026; annualized volatility 0.279; beta 1.343; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
-      "decision": "watchlist",
+      "decision": "candidate",
       "unsupported_claims": []
     },
     {
       "ticker": "IBM",
-      "model_score_30d_mean": 0.5159169219899973,
+      "model_score_30d_mean": 0.5345596555555744,
       "risk": {
-        "vol": 0.8106023435911632,
-        "beta": 1.8085303224046203,
-        "drawdown": -0.2433860826777633
+        "vol": 0.9634808381195057,
+        "beta": 3.6576025902545473,
+        "drawdown": -0.3749962032621572
       },
       "evidence": [
         {
           "score": 0.24871860645302252,
-          "confidence": 0.2769994304098712,
+          "confidence": 0.27729542426304704,
           "ticker": "IBM",
-          "text": "IBM latest research note: 21-day momentum 0.120; annualized volatility 0.811; beta 1.809; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "IBM latest research note: 21-day momentum -0.163; annualized volatility 0.963; beta 3.658; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.247000540364552,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23800001461278839,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23800001461278839,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -383,36 +383,36 @@
     },
     {
       "ticker": "DIS",
-      "model_score_30d_mean": 0.43764214516031913,
+      "model_score_30d_mean": 0.4705082372343172,
       "risk": {
-        "vol": 0.19958215032066315,
-        "beta": 1.1268794448037256,
-        "drawdown": -0.09249033683048047
+        "vol": 0.2780068582783964,
+        "beta": 1.3657862954470492,
+        "drawdown": -0.14568378428124418
       },
       "evidence": [
         {
-          "score": 0.25063771785598765,
-          "confidence": 0.27738393671856587,
+          "score": 0.24871860645302252,
+          "confidence": 0.27729542426304704,
           "ticker": "DIS",
-          "text": "DIS latest research note: 21-day momentum 0.016; annualized volatility 0.200; beta 1.127; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "DIS latest research note: 21-day momentum -0.014; annualized volatility 0.278; beta 1.366; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.24686918048737377,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23787344139703018,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23787344139703018,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -420,36 +420,36 @@
     },
     {
       "ticker": "KO",
-      "model_score_30d_mean": 0.42625731949172974,
+      "model_score_30d_mean": 0.4539205719414889,
       "risk": {
-        "vol": 0.24474016649595604,
-        "beta": -0.1408808366668616,
-        "drawdown": -0.062255859375
+        "vol": 0.2852119477663157,
+        "beta": 0.25232578725659516,
+        "drawdown": -0.06225585937500011
       },
       "evidence": [
         {
-          "score": 0.25461309780709024,
-          "confidence": 0.27828151517335753,
+          "score": 0.24871860645302252,
+          "confidence": 0.27729542426304704,
           "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "KO latest research note: 21-day momentum 0.045; annualized volatility 0.285; beta 0.252; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.2466853971155868,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.2376963549618899,
+          "score": 0.0947288705635491,
+          "confidence": 0.23772004874754452,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.09545979800915155,
-          "confidence": 0.2373367327491658,
-          "ticker": "DIS",
-          "text": "DIS latest research note: 21-day momentum 0.016; annualized volatility 0.200; beta 1.127; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",
@@ -457,36 +457,36 @@
     },
     {
       "ticker": "WMT",
-      "model_score_30d_mean": 0.45655955322150454,
+      "model_score_30d_mean": 0.49344196952848207,
       "risk": {
-        "vol": 0.3301912620161324,
-        "beta": 0.38219016322470994,
-        "drawdown": -0.15752608047689998
+        "vol": 0.25522110388939423,
+        "beta": 0.31171256254436475,
+        "drawdown": -0.1922503725782413
       },
       "evidence": [
         {
-          "score": 0.25063771785598765,
-          "confidence": 0.27738393671856587,
+          "score": 0.24871860645302254,
+          "confidence": 0.27729542426304704,
           "ticker": "WMT",
-          "text": "WMT latest research note: 21-day momentum -0.127; annualized volatility 0.330; beta 0.382; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "WMT latest research note: 21-day momentum -0.035; annualized volatility 0.255; beta 0.312; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
           "score": 0.1340936808861727,
-          "confidence": 0.24686918048737377,
+          "confidence": 0.247264478241864,
           "ticker": "SYSTEM",
           "text": "A signal must survive walk-forward validation, transaction costs, turnover constraints, and stress periods."
         },
         {
-          "score": 0.09697389161959502,
-          "confidence": 0.23787344139703018,
+          "score": 0.0947288705635491,
+          "confidence": 0.2377200487475445,
           "ticker": "AAPL",
-          "text": "AAPL latest research note: 21-day momentum -0.003; annualized volatility 0.245; beta 0.867; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "text": "AAPL latest research note: 21-day momentum 0.224; annualized volatility 0.293; beta 1.107; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         },
         {
-          "score": 0.096973891619595,
-          "confidence": 0.23787344139703018,
-          "ticker": "KO",
-          "text": "KO latest research note: 21-day momentum -0.031; annualized volatility 0.245; beta -0.141; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
+          "score": 0.09472887056354908,
+          "confidence": 0.2377200487475445,
+          "ticker": "MSFT",
+          "text": "MSFT latest research note: 21-day momentum 0.103; annualized volatility 0.320; beta 1.000; risk checks include liquidity, sector exposure, drawdown, and transaction costs."
         }
       ],
       "decision": "watchlist",

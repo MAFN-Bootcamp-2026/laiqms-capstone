@@ -18,23 +18,23 @@
     "compute": {
       "batch_feature_job": "AWS Batch or ECS scheduled task",
       "model_training": "SageMaker training job or ECS task",
-      "inference_api": "Lambda/API Gateway for low-volume class demo; ECS/Fargate for heavier use",
+      "inference_api": "Lambda/API Gateway for low-volume scoring; ECS/Fargate for heavier use",
       "notebook": "SageMaker Studio or local Jupyter template"
     },
     "state": {
       "predictions": "DynamoDB table keyed by date#ticker",
       "risk_reports": "S3 JSON artifacts and Athena external table",
-      "release_toggles": "S3 JSON release state behind authenticated API"
+      "strategy_status": "S3 JSON strategy state (live / review-only / halted) behind authenticated API"
     },
     "networking": {
-      "cdn": "CloudFront for student downloads",
+      "cdn": "CloudFront for research-artifact distribution",
       "private_subnets": "model jobs and databases",
       "public_edge": "API Gateway + WAF"
     },
     "security": {
       "iam": "least-privilege role per job",
       "encryption": "SSE-S3 or KMS for S3; DynamoDB encryption at rest",
-      "auth": "Cognito group mafn-admins controls release",
+      "auth": "identity-provider group membership gates promotion to live trading",
       "audit": "CloudTrail + application audit log"
     },
     "monitoring": {
@@ -121,7 +121,7 @@
     },
     {
       "service": "DynamoDB",
-      "assumption": "on-demand class demo",
+      "assumption": "on-demand prediction store",
       "monthly_usd": 5.0
     },
     {
@@ -141,9 +141,9 @@
     }
   ],
   "runbook": [
-    "If data freshness > threshold: stop scoring, alert instructor, publish stale-data banner.",
-    "If model drift breaches threshold: keep old model, require admin review before release.",
-    "If unsupported LLM claim rate rises: disable research assistant output for students.",
+    "If data freshness > threshold: stop scoring, page the on-call researcher, publish a stale-data banner.",
+    "If model drift breaches threshold: keep the incumbent model, require sign-off before promotion.",
+    "If unsupported LLM claim rate rises: disable research-assistant output until grounding is restored.",
     "If drawdown or turnover limit breaches: set strategy status to review-only.",
     "If cost budget forecast exceeds limit: reduce training frequency and cap artifact retention."
   ],
