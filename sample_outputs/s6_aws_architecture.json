@@ -1,0 +1,157 @@
+{
+  "laiqms_modules": [
+    "S",
+    "AWS",
+    "L",
+    "AI",
+    "Q",
+    "M"
+  ],
+  "architecture": {
+    "name": "laiqms-alpha-research-and-risk-system",
+    "data_layer": {
+      "raw_market_data": "s3://mafn-capstone/raw/market/",
+      "feature_store": "s3://mafn-capstone/curated/features/",
+      "model_registry": "s3://mafn-capstone/models/",
+      "research_corpus": "s3://mafn-capstone/rag/documents/"
+    },
+    "compute": {
+      "batch_feature_job": "AWS Batch or ECS scheduled task",
+      "model_training": "SageMaker training job or ECS task",
+      "inference_api": "Lambda/API Gateway for low-volume class demo; ECS/Fargate for heavier use",
+      "notebook": "SageMaker Studio or local Jupyter template"
+    },
+    "state": {
+      "predictions": "DynamoDB table keyed by date#ticker",
+      "risk_reports": "S3 JSON artifacts and Athena external table",
+      "release_toggles": "S3 JSON release state behind authenticated API"
+    },
+    "networking": {
+      "cdn": "CloudFront for student downloads",
+      "private_subnets": "model jobs and databases",
+      "public_edge": "API Gateway + WAF"
+    },
+    "security": {
+      "iam": "least-privilege role per job",
+      "encryption": "SSE-S3 or KMS for S3; DynamoDB encryption at rest",
+      "auth": "Cognito group mafn-admins controls release",
+      "audit": "CloudTrail + application audit log"
+    },
+    "monitoring": {
+      "data_freshness": "CloudWatch metric: minutes since last market-data update",
+      "model_drift": "population stability index / feature distribution shift",
+      "llm_grounding": "retrieval evidence count and unsupported-claim rate",
+      "risk": "drawdown, VaR, turnover, beta, exposure caps"
+    }
+  },
+  "iam_policy_example": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject"
+        ],
+        "Resource": [
+          "arn:aws:s3:::mafn-capstone/*"
+        ]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "dynamodb:GetItem",
+          "dynamodb:PutItem",
+          "dynamodb:Query"
+        ],
+        "Resource": [
+          "arn:aws:dynamodb:us-east-1:123456789012:table/mafn-capstone-*"
+        ]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "cloudwatch:PutMetricData"
+        ],
+        "Resource": "*"
+      }
+    ]
+  },
+  "step_functions_skeleton": {
+    "Comment": "LAIQMS capstone daily pipeline",
+    "StartAt": "IngestMarketData",
+    "States": {
+      "IngestMarketData": {
+        "Type": "Task",
+        "Resource": "arn:aws:lambda:REGION:ACCT:function:ingest-market-data",
+        "Next": "BuildFeatures"
+      },
+      "BuildFeatures": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::batch:submitJob.sync",
+        "Next": "ScoreModel"
+      },
+      "ScoreModel": {
+        "Type": "Task",
+        "Resource": "arn:aws:lambda:REGION:ACCT:function:score-model",
+        "Next": "RiskChecks"
+      },
+      "RiskChecks": {
+        "Type": "Task",
+        "Resource": "arn:aws:lambda:REGION:ACCT:function:risk-checks",
+        "Next": "PublishReports"
+      },
+      "PublishReports": {
+        "Type": "Task",
+        "Resource": "arn:aws:lambda:REGION:ACCT:function:publish-reports",
+        "End": true
+      }
+    }
+  },
+  "monthly_cost_estimate": [
+    {
+      "service": "S3",
+      "assumption": "50 GB artifacts/data",
+      "monthly_usd": 1.25
+    },
+    {
+      "service": "Lambda",
+      "assumption": "100k requests",
+      "monthly_usd": 2.0
+    },
+    {
+      "service": "DynamoDB",
+      "assumption": "on-demand class demo",
+      "monthly_usd": 5.0
+    },
+    {
+      "service": "CloudWatch",
+      "assumption": "metrics/logs/alarms",
+      "monthly_usd": 8.0
+    },
+    {
+      "service": "ECS/Batch",
+      "assumption": "scheduled training jobs",
+      "monthly_usd": 30.0
+    },
+    {
+      "service": "CloudFront",
+      "assumption": "notebook downloads",
+      "monthly_usd": 3.0
+    }
+  ],
+  "runbook": [
+    "If data freshness > threshold: stop scoring, alert instructor, publish stale-data banner.",
+    "If model drift breaches threshold: keep old model, require admin review before release.",
+    "If unsupported LLM claim rate rises: disable research assistant output for students.",
+    "If drawdown or turnover limit breaches: set strategy status to review-only.",
+    "If cost budget forecast exceeds limit: reduce training frequency and cap artifact retention."
+  ],
+  "defense_prompts": [
+    "Explain why the model is not allowed to train on future data.",
+    "Defend the portfolio optimizer against noisy expected returns.",
+    "Explain where the LLM is useful and where it must be constrained.",
+    "Draw the AWS production architecture and name the failure modes.",
+    "Describe the monitoring that would stop this strategy from going live."
+  ]
+}

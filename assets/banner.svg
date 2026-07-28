@@ -1,0 +1,34 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LAIQMS Capstone banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06080c"/>
+      <stop offset="100%" stop-color="#0f1318"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect x="0" y="0" width="6" height="300" fill="#8FB4DD"/>
+
+  <text x="64" y="118" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="52" fill="#f3f6fc">LAIQMS Capstone</text>
+  <text x="64" y="156" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#d6d9df">LLM-Grounded Alpha Research &amp; Risk System</text>
+  <text x="64" y="186" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" letter-spacing="0.6" fill="#8b9099">COLUMBIA MAFN &#183; LAIQMS BOOTCAMP</text>
+
+  <!-- pillar chips, matching the site's pillar-letter badges -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="20" text-anchor="middle">
+    <rect x="64"  y="220" width="42" height="42" rx="11" fill="#8FB4DD"/>
+    <text x="85"  y="247" fill="#0b0d11">Q</text>
+
+    <rect x="116" y="220" width="42" height="42" rx="11" fill="#1e7a4d"/>
+    <text x="137" y="247" fill="#f3f6fc">M</text>
+
+    <rect x="168" y="220" width="42" height="42" rx="11" fill="#8FB4DD"/>
+    <text x="189" y="247" fill="#0b0d11">L</text>
+
+    <rect x="220" y="220" width="58" height="42" rx="11" fill="#8FB4DD"/>
+    <text x="249" y="247" fill="#0b0d11">AI</text>
+
+    <rect x="288" y="220" width="42" height="42" rx="11" fill="#9a5b00"/>
+    <text x="309" y="247" fill="#f3f6fc">S</text>
+  </g>
+
+  <text x="1136" y="270" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6a6f78" text-anchor="end">github.com/MAFN-Bootcamp-2026/laiqms-capstone</text>
+</svg>

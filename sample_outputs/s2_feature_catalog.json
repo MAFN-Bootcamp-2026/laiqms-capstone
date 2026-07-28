@@ -1,0 +1,51 @@
+{
+  "laiqms_modules": [
+    "S",
+    "Q"
+  ],
+  "feature_columns": [
+    "mom_5",
+    "mom_21",
+    "vol_21",
+    "vol_z",
+    "dollar_vol_z",
+    "beta_63",
+    "drawdown_63"
+  ],
+  "model_table_rows": 7920,
+  "top_momentum_last": [
+    [
+      "GE",
+      0.2536455412226586
+    ],
+    [
+      "GS",
+      0.18069653509055272
+    ],
+    [
+      "CAT",
+      0.14610242399581486
+    ],
+    [
+      "IBM",
+      0.12040660279764315
+    ]
+  ],
+  "rebalance_date_example_index": 12,
+  "pipeline_topological_order": [
+    "raw_prices",
+    "returns",
+    "labels",
+    "rolling_features",
+    "risk_features",
+    "model_table",
+    "walk_forward_model",
+    "portfolio"
+  ],
+  "complexities": {
+    "rolling_features_vectorized": "roughly O(T*N) per feature",
+    "top_k_heap": "O(N log k)",
+    "date_binary_search": "O(log T)",
+    "dag_topological_sort": "O(V+E)"
+  }
+}

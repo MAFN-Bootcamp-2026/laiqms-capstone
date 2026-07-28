@@ -1,0 +1,72 @@
+{
+  "laiqms_modules": [
+    "M",
+    "AI"
+  ],
+  "n_borrowers": 6000,
+  "base_default_rate": 0.20766666666666667,
+  "metrics": {
+    "logistic": {
+      "roc_auc": 0.8733415334768357,
+      "ks_statistic": 0.5909278412372216,
+      "brier": 0.10633927613291488
+    },
+    "random_forest": {
+      "roc_auc": 0.8655563972369518,
+      "ks_statistic": 0.5722525144190024,
+      "brier": 0.11170878377693243
+    }
+  },
+  "rating_distribution": {
+    "AAA": 151,
+    "AA": 192,
+    "A": 330,
+    "BBB": 284,
+    "BB": 273,
+    "B": 256,
+    "CCC": 314
+  },
+  "risk_category_distribution": {
+    "Low": 673,
+    "Medium": 431,
+    "High": 696
+  },
+  "lgd_assumption": 0.45,
+  "portfolio_ead": 38848027.76903367,
+  "portfolio_expected_loss": 4528209.55831466,
+  "expected_loss_rate": 0.11656214789684025,
+  "pd_histogram": {
+    "counts": [
+      673,
+      284,
+      147,
+      126,
+      79,
+      66,
+      61,
+      50,
+      41,
+      40,
+      29,
+      29,
+      23,
+      30,
+      16,
+      28,
+      23,
+      15,
+      17,
+      23
+    ],
+    "bin_width": 0.05
+  },
+  "feature_importance": {
+    "age": 0.0134,
+    "income": 0.1314,
+    "loan_amount": 0.0816,
+    "employment_years": 0.0574,
+    "num_delinquencies": 0.0974,
+    "credit_utilization": 0.3534,
+    "debt_to_income": 0.2655
+  }
+}

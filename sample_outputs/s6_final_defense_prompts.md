@@ -1,0 +1,5 @@
+- Explain why the model is not allowed to train on future data.
+- Defend the portfolio optimizer against noisy expected returns.
+- Explain where the LLM is useful and where it must be constrained.
+- Draw the AWS production architecture and name the failure modes.
+- Describe the monitoring that would stop this strategy from going live.

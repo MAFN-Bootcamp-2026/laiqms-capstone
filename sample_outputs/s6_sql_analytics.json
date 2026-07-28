@@ -1,0 +1,96 @@
+{
+  "laiqms_modules": [
+    "S"
+  ],
+  "engine": "sqlite3 (Python stdlib, in-memory)",
+  "tables": [
+    "predictions",
+    "strategies",
+    "loans"
+  ],
+  "top_candidates": [
+    {
+      "ticker": "JPM",
+      "avg_score": 0.5412,
+      "n_obs": 378
+    },
+    {
+      "ticker": "GS",
+      "avg_score": 0.5388,
+      "n_obs": 378
+    },
+    {
+      "ticker": "UNH",
+      "avg_score": 0.5315,
+      "n_obs": 378
+    },
+    {
+      "ticker": "CAT",
+      "avg_score": 0.5314,
+      "n_obs": 378
+    },
+    {
+      "ticker": "GE",
+      "avg_score": 0.5222,
+      "n_obs": 378
+    }
+  ],
+  "best_strategy": [
+    {
+      "strategy": "momentum",
+      "sharpe": 0.3434
+    },
+    {
+      "strategy": "ma_crossover",
+      "sharpe": 0.2209
+    },
+    {
+      "strategy": "pairs_trading",
+      "sharpe": 0.1031
+    }
+  ],
+  "expected_loss_by_rating": [
+    {
+      "rating": "CCC",
+      "n": 314,
+      "avg_pd": 0.6578,
+      "total_el": 3066426.0
+    },
+    {
+      "rating": "B",
+      "n": 256,
+      "avg_pd": 0.2907,
+      "total_el": 796062.0
+    },
+    {
+      "rating": "BB",
+      "n": 273,
+      "avg_pd": 0.1465,
+      "total_el": 365481.0
+    },
+    {
+      "rating": "BBB",
+      "n": 284,
+      "avg_pd": 0.0729,
+      "total_el": 177244.0
+    },
+    {
+      "rating": "A",
+      "n": 330,
+      "avg_pd": 0.0328,
+      "total_el": 95912.0
+    },
+    {
+      "rating": "AA",
+      "n": 192,
+      "avg_pd": 0.0147,
+      "total_el": 21546.0
+    },
+    {
+      "rating": "AAA",
+      "n": 151,
+      "avg_pd": 0.0056,
+      "total_el": 5539.0
+    }
+  ]
+}

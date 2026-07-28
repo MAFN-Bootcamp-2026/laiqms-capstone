@@ -1,0 +1,20 @@
+name: Execute notebook
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Execute notebook end to end
+        run: jupyter nbconvert --to notebook --execute notebook/laiqms_capstone.ipynb --output /tmp/executed_ci.ipynb

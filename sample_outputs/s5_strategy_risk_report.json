@@ -1,0 +1,68 @@
+{
+  "laiqms_modules": [
+    "Q",
+    "M",
+    "S"
+  ],
+  "ann_return": 0.11760103207073684,
+  "ann_vol": 0.12019604325939699,
+  "sharpe": 0.620661296726209,
+  "max_drawdown": -0.12129357528302576,
+  "beta_to_equal_weight": 0.21751289188925613,
+  "alpha_daily": 0.0003018196010276114,
+  "daily_var_95": -0.011824219761437956,
+  "daily_expected_shortfall_95": -0.016980552941787137,
+  "average_turnover": 0.05555555555555555,
+  "option_overlay": {
+    "ticker": "UNH",
+    "call": {
+      "price": 10.977110499232055,
+      "delta": 0.417871399746047,
+      "gamma": 0.010233719014399635,
+      "vega": 54.97125215459732,
+      "theta": -67.15062664093824
+    },
+    "delta_hedge_shares_per_call": -0.417871399746047
+  },
+  "stress": {
+    "mild_liquidity_cost": {
+      "ann_return": 0.11060103207073682,
+      "ann_vol": 0.12025713312369152,
+      "max_drawdown": -0.12247745002169397
+    },
+    "severe_liquidity_cost": {
+      "ann_return": 0.09660103207073685,
+      "ann_vol": 0.12049045470246351,
+      "max_drawdown": -0.1248420627164104
+    },
+    "crisis_gap": {
+      "ann_return": -0.2583989679292632,
+      "ann_vol": 0.12927633989345605,
+      "max_drawdown": -0.35131354326278985
+    }
+  },
+  "latest_rebalance_order": {
+    "date": "2026-03-24",
+    "orders": {
+      "AAPL": -0.16667,
+      "MSFT": 0.16667,
+      "JPM": 0.0,
+      "GS": 0.0,
+      "XOM": 0.16667,
+      "UNH": -0.16667,
+      "CAT": 0.0,
+      "GE": 0.0,
+      "IBM": 0.0,
+      "DIS": 0.0,
+      "KO": 0.0,
+      "WMT": 0.0
+    }
+  },
+  "execution_controls": [
+    "position cap by volatility bucket",
+    "turnover throttle",
+    "liquidity/cost gate before order creation",
+    "model-score stale check",
+    "kill switch when drawdown or data freshness breaches limits"
+  ]
+}

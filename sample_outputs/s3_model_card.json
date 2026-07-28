@@ -1,0 +1,74 @@
+{
+  "laiqms_modules": [
+    "M",
+    "AI",
+    "Q"
+  ],
+  "splits": 9,
+  "features": [
+    "mom_5",
+    "mom_21",
+    "vol_21",
+    "vol_z",
+    "dollar_vol_z",
+    "beta_63",
+    "drawdown_63"
+  ],
+  "metrics": {
+    "logistic_l2": {
+      "roc_auc": 0.5119733878919652,
+      "brier": 0.25128856394609184,
+      "accuracy_median_threshold": 0.5110229276895943,
+      "precision": 0.5110229276895943,
+      "recall": 0.5110229276895943,
+      "f1": 0.5110229276895943
+    },
+    "random_forest": {
+      "roc_auc": 0.5320629166161206,
+      "brier": 0.2501098079054901,
+      "accuracy_median_threshold": 0.5185185185185185,
+      "precision": 0.5185185185185185,
+      "recall": 0.5185185185185185,
+      "f1": 0.5185185185185185
+    },
+    "gradient_boosting": {
+      "roc_auc": 0.527921056396953,
+      "brier": 0.251480550993046,
+      "accuracy_median_threshold": 0.5238095238095238,
+      "precision": 0.5237676056338029,
+      "recall": 0.5246913580246914,
+      "f1": 0.5242290748898678
+    },
+    "mlp": {
+      "roc_auc": 0.5161360497559793,
+      "brier": 0.28782208808442905,
+      "accuracy_median_threshold": 0.5123456790123457,
+      "precision": 0.5123456790123457,
+      "recall": 0.5123456790123457,
+      "f1": 0.5123456790123457
+    },
+    "ensemble": {
+      "roc_auc": 0.5236120053874316,
+      "brier": 0.25239689033596907,
+      "accuracy_median_threshold": 0.5127865961199295,
+      "precision": 0.5127865961199295,
+      "recall": 0.5127865961199295,
+      "f1": 0.5127865961199295
+    }
+  },
+  "permutation_importance_auc_drop": {
+    "mom_5": -0.0028069098009574356,
+    "mom_21": 0.002940759637188206,
+    "vol_21": 0.00018896447467875443,
+    "vol_z": -0.0017912257495590334,
+    "dollar_vol_z": 0.005210301713277854,
+    "beta_63": 0.01865236835474937,
+    "drawdown_63": 0.013552295918367374
+  },
+  "leakage_controls": [
+    "labels use future returns only after the feature date",
+    "walk-forward split uses past dates only",
+    "scalers are fit inside each training fold",
+    "reported metrics are out-of-sample by fold"
+  ]
+}
